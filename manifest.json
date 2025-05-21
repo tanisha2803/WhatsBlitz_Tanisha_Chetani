@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Auto Messenger",
+  "version": "1.0",
+  "description": "Injects scripts into WhatsApp Web.",
+  "permissions": [],
+  "host_permissions": ["https://web.whatsapp.com/"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
