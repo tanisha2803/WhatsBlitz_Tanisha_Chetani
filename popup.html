@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WhatsBlitz - Upload Contacts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      max-width: 400px;
+    }
+    input[type="file"] {
+      margin-bottom: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 6px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Upload Contacts File</h2>
+  
+  <!-- File input accepts CSV and Excel -->
+  <input type="file" id="fileInput" accept=".csv, .xlsx" />
+
+  <!-- Container for showing parsed contacts -->
+  <div id="tableContainer"></div>
+
+  <!-- Local libraries -->
+  <script src="libs/papaparse.min.js"></script>
+  <script src="libs/xlsx.full.min.js"></script>
+
+  <!-- Your script -->
+  <script src="popup.js"></script>
+</body>
+</html>
